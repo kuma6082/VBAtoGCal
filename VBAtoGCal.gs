@@ -10,16 +10,6 @@ function createEvent(summary, date,description) {
     },
     'transparency': 'transparent',
     'description': description
-    // 以下に追加の引数を設定することができます
-    // 'location': 'イベントの場所',
-    // 'reminders': {
-    //   'useDefault': false,
-    //   'overrides': [
-    //     {'method': 'popup', 'minutes': 10},
-    //     {'method': 'email', 'minutes': 60}
-    //   ]
-    // },
-    // 他の引数も追加可能です
   };
   
   var createdEvent = Calendar.Events.insert(event, calendarId);
@@ -36,6 +26,6 @@ function doGet(e) {
   // return ContentService.createTextOutput('予定が作成されました。ID: ' + createdEvent.id);
 }
 
-// function test() {
-//   createEvent("予定のタイトル", "2023-06-20", "2023-06-20")
-// }
+function test() {
+  createEvent("予定のタイトル", "2023-06-20", "2023-06-20")
+}
