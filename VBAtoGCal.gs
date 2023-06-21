@@ -29,8 +29,9 @@ function createEvent(summary, date,description) {
 function doGet(e) {
   var summary = e.parameter.summary;
   var date = e.parameter.date;
+  var description = e.parameter.description;
   
-  var createdEvent = createEvent(summary, date);
+  var createdEvent = createEvent(summary, date ,description);
   
   // return ContentService.createTextOutput('予定が作成されました。ID: ' + createdEvent.id);
 }
