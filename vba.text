@@ -1,1 +1,23 @@
-VBAをここに書く
+Function CreateGoogleCalendarEvent(summary, EventDate)
+    Dim scriptUrl As String
+    scriptUrl = "https://script.google.com/macros/s/AKfycbzMfB-Hos23CDUkv74-1V8c_X0Tf1_yMjmtFh0LqkiTirwqn8Xkdj_cFwuZ4QcLyAY0/exec"
+    
+    Dim xlApp As New Excel.Application
+    
+    ' 引数の値を設定
+    summary = xlApp.WorksheetFunction.EncodeURL(summary)
+    EventDate = xlApp.WorksheetFunction.EncodeURL(EventDate)
+    
+    Dim http As Object
+    Set http = CreateObject("MSXML2.XMLHTTP")
+    
+    ' URLに引数を追加
+    scriptUrl = scriptUrl & "?summary=" & summary & "&date=" & EventDate
+    Debug.Print scriptUrl
+    http.Open "GET", scriptUrl, False
+    'On Error Resume Next
+    'アクセスが拒否されましたとエラーが出るがカレンダーに予定は作成できる
+    'おそらくプロキシが関係していると思われる
+    http.Send
+    
+End Function
