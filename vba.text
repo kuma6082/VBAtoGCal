@@ -1,6 +1,11 @@
+※参照設定を設定して下さい下記
+Microsoft XML, v6.0
+Microsoft Excel Object Library
+
 Function CreateGoogleCalendarEvent(summary, EventDate)
     Dim scriptUrl As String
-    scriptUrl = "https://script.google.com/macros/s/AKfycbzMfB-Hos23CDUkv74-1V8c_X0Tf1_yMjmtFh0LqkiTirwqn8Xkdj_cFwuZ4QcLyAY0/exec"
+    'GASをデプロイした時のPAHTを記入
+    scriptUrl = "https://script.google.com/macros/s/************************/exec"
     
     Dim xlApp As New Excel.Application
     
