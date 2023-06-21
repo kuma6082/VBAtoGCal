@@ -1,4 +1,4 @@
-function createEvent(summary, date) {
+function createEvent(summary, date,description) {
   var calendarId = 'primary';
   var event = {
     'summary': summary,
@@ -8,7 +8,18 @@ function createEvent(summary, date) {
     'end': {
       'date': date,
     },
-    'transparency': 'transparent'
+    'transparency': 'transparent',
+    'description': description
+    // 以下に追加の引数を設定することができます
+    // 'location': 'イベントの場所',
+    // 'reminders': {
+    //   'useDefault': false,
+    //   'overrides': [
+    //     {'method': 'popup', 'minutes': 10},
+    //     {'method': 'email', 'minutes': 60}
+    //   ]
+    // },
+    // 他の引数も追加可能です
   };
   
   var createdEvent = Calendar.Events.insert(event, calendarId);
