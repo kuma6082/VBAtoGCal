@@ -1,5 +1,5 @@
 Attribute VB_Name = "VBAtoGCAL"
-'¦QÆİ’è‚ğİ’è‚µ‚Ä‰º‚³‚¢
+'â€»å‚ç…§è¨­å®šã‚’è¨­å®šã—ã¦ä¸‹ã•ã„
 'Microsoft XML, v6.0
 'Microsoft Excel Object Library
 
@@ -9,7 +9,7 @@ Sub sample()
     Dim description
     
     summary = "sample"
-    EventDate = "2026-6-23"
+    EventDate = Format(Date, "yyyy-mm-dd")
     description = "sample"
     
     Call CreateGoogleCalendarEvent(summary, EventDate, description)
@@ -18,12 +18,12 @@ End Sub
 
 Function CreateGoogleCalendarEvent(summary, EventDate, description)
     Dim scriptUrl As String
-    'GAS‚ğƒfƒvƒƒC‚µ‚½webƒAƒvƒŠ‚ÌURL‚ğ‹L“ü
+    'GASã‚’ãƒ‡ãƒ—ãƒ­ã‚¤ã—ãŸwebã‚¢ãƒ—ãƒªã®URLã‚’è¨˜å…¥
     scriptUrl = "https://script.google.com/macros/s/************************/exec"
     
     Dim xlApp As New Excel.Application
     
-    ' ˆø”‚Ì’l‚ğİ’è
+    ' å¼•æ•°ã®å€¤ã‚’è¨­å®š
     summary = xlApp.WorksheetFunction.EncodeURL(summary)
     EventDate = xlApp.WorksheetFunction.EncodeURL(EventDate)
     description = xlApp.WorksheetFunction.EncodeURL(description)
@@ -31,7 +31,7 @@ Function CreateGoogleCalendarEvent(summary, EventDate, description)
     Dim http As Object
     Set http = CreateObject("MSXML2.XMLHTTP")
     
-    ' URL‚Éˆø”‚ğ’Ç‰Á
+    ' URLã«å¼•æ•°ã‚’è¿½åŠ 
     scriptUrl = scriptUrl & "?summary=" & summary & "&date=" & EventDate & "&description=" & description
     Debug.Print scriptUrl
     http.Open "GET", scriptUrl, False
