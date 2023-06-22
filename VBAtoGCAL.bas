@@ -8,9 +8,9 @@ Sub sample()
     Dim EventDate
     Dim description
     
-    summary = "sample"
+    summary = "予定のタイトル"
     EventDate = Format(Date, "yyyy-mm-dd")
-    description = "sample"
+    description = "予定の説明"
     
     Call CreateGoogleCalendarEvent(summary, EventDate, description)
     
