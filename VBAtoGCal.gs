@@ -1,7 +1,7 @@
 function createEvent(summary, date,description) {
   var calendarId = 'primary';
   var event = {
-    'summary': summary,
+    'summary': summary,’予定のタイトル
     'start': {
       'date': date,
     },
@@ -9,7 +9,7 @@ function createEvent(summary, date,description) {
       'date': date,
     },
     'transparency': 'transparent',
-    'description': description
+    'description': description’予定の説明
   };
   
   var createdEvent = Calendar.Events.insert(event, calendarId);
