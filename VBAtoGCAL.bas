@@ -3,6 +3,7 @@ Attribute VB_Name = "VBAtoGCAL"
 'Microsoft XML, v6.0
 'Microsoft Excel Object Library
 
+'動作確認:Excel,OUTLOOK
 Sub sample()
     Dim summary
     Dim EventDate
@@ -15,6 +16,29 @@ Sub sample()
     Call CreateGoogleCalendarEvent(summary, EventDate, description)
     
 End Sub
+
+'動作確認:Outlook
+'Outlookで選択しているメールの件名を取得して今日の日付で予定を作成
+'Outlook以外で実行する場合削除してください。
+Sub OutlookSample()
+    
+    Dim originalMail As MailItem
+    Dim summary As String
+    Dim EventDate As String
+    Dim Description As String
+    
+    ' 選択したメール取得
+    Set originalMail = Outlook.Application.ActiveExplorer.Selection(1)
+    summary = originalMail.Subject
+    EventDate = Format(Date, "yyyy-mm-dd")
+    Description = originalMail.Subject
+    
+    Call CreateGoogleCalendarEvent(summary, EventDate, Description)
+    
+    Set originalMail = Nothing
+    
+End Sub
+
 
 Function CreateGoogleCalendarEvent(summary, EventDate, description)
     Dim scriptUrl As String
