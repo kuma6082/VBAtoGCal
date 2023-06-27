@@ -18,7 +18,7 @@ VBAよりhttpリクエストでwebアプリ化したGASからCalenderAPIを叩�
 
 * コードをコピーしてデプロイする
   
-  <img width="200" alt="image" src="https://github.com/kuma6082/VBAtoGCal/assets/89393398/059edac3-30bc-462b-a975-41027d28fc10">
+  <img width="200" alt="image" src="https://github.com/kuma6082/VBAtoGCal/assets/89393398/d144acac-7840-4564-8920-db81a209b450">
 
 * webアプリのURLをコピーをクリックする
 
