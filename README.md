@@ -27,7 +27,7 @@ VBAよりhttpリクエストでwebアプリ化したGASからCalenderAPIを叩�
 
 ### VBA
 
-* outlookからVBEを開き、VBAtoGCAL.basをインポートする
+* outlook等からVBEを開き、VBAtoGCAL.basをインポートする
 * ソースに書いてある参照設定をチェックをいれる
 * scriptUrl = に先ほどコピーしたwebアプリのURLを記入する
 * Sub sample()を実行すればカレンダーに今日の予定が追加される
