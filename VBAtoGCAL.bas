@@ -25,17 +25,20 @@ Sub OutlookSample()
     Dim originalMail As MailItem
     Dim summary As String
     Dim EventDate As String
+    Dim Description As String
     
     ' 選択したメール取得
     Set originalMail = Outlook.Application.ActiveExplorer.Selection(1)
     summary = originalMail.Subject
     EventDate = Format(Date, "yyyy-mm-dd")
+    Description = originalMail.Subject
     
-    Call CreateGoogleCalendarEvent(summary, EventDate)
+    Call CreateGoogleCalendarEvent(summary, EventDate, Description)
     
     Set originalMail = Nothing
     
 End Sub
+
 
 Function CreateGoogleCalendarEvent(summary, EventDate, description)
     Dim scriptUrl As String
