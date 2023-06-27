@@ -14,20 +14,21 @@ VBAよりhttpリクエストでwebアプリ化したGASからCalenderAPIを叩�
 * Apps Scriptで新しいプロジェクトを作成する(https://script.google.com/home)
 * GoogleClenderAPIを追加する
 
-  <img width="200" alt="image" src="https://github.com/kuma6082/VBAtoGCal/assets/89393398/767779ca-23b7-4466-ad32-654fcd16c81a">
+  <img width="200" alt="image" src="https://github.com/kuma6082/VBAtoGCal/assets/89393398/6222d70b-d0ea-41a4-bc29-69745e32aad8">
 
 * コードをコピーしてデプロイする
   
-  <img width="200" alt="image" src="https://github.com/kuma6082/VBAtoGCal/assets/89393398/810919e5-d77b-48cd-812e-8eaedb2b8830">
+  <img width="200" alt="image" src="https://github.com/kuma6082/VBAtoGCal/assets/89393398/059edac3-30bc-462b-a975-41027d28fc10">
 
 * webアプリのURLをコピーをクリックする
-  
-  <img width="200" alt="image" src="https://github.com/kuma6082/VBAtoGCal/assets/89393398/88c91803-83a5-4aef-87b9-c2e210395c42">
+
+  <img width="200" alt="image" src="https://github.com/kuma6082/VBAtoGCal/assets/89393398/fad16d01-0a0d-4976-8703-5b9d47c6bb93">
+
 
 ### VBA
 
 * outlookからVBEを開き、VBAtoGCAL.basをインポートする
-* ソースに書いてある参照設定をチャックをいれる
+* ソースに書いてある参照設定をチェックをいれる
 * scriptUrl = に先ほどコピーしたwebアプリのURLを記入する
 * Sub sample()を起動すればカレンダーに今日の予定が追加される
 
