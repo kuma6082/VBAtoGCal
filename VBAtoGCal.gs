@@ -15,6 +15,7 @@ function createEvent(summary, date, description ,gcalID) {
   Logger.log('summary: ' + summary);
   Logger.log('date: ' + date);
   Logger.log('description: ' + description);
+  Logger.log('gcalID: ' + gcalID);
   
   const createdEvent = Calendar.Events.insert(event, calendarId);
   return createdEvent;
@@ -32,5 +33,5 @@ function doGet(e) {
 }
 
 function test() {
-  createEvent("テスト予定のタイトル", "2023-09-11", "2023-09-11","")
+  createEvent("テスト予定のタイトル", "2023-09-11", "2023-09-11","primary")
 }
