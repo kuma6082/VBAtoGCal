@@ -18,6 +18,7 @@ function createEvent(summary, date, description ,gcalID) {
   Logger.log('gcalID: ' + gcalID);
   
   const createdEvent = Calendar.Events.insert(event, calendarId);
+  Logger.log('Eventid: ' + createdEvent.id);
   return createdEvent;
 }
 
@@ -27,7 +28,7 @@ function doGet(e) {
   const description = e.parameter.description;
   const gcalID = e.parameter.gcalID;
   const createdEvent = createEvent(summary, date ,description ,gcalID);
-  
+
   return HtmlService.createHtmlOutput('<h1>予定が作成されました。ID:【' + createdEvent.id + '】<h1>')
   // return ContentService.createTextOutput('予定が作成されました。ID: ' + createdEvent.id);
 }
