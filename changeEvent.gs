@@ -25,10 +25,6 @@ function changeEvent(eventID, summary, date, description,gcalID) {
         console.log('date: 通過');
       }else{
         ;
-        // var date = event.getStartTime();
-        // var date = new Date(eventStartTime);
-        // var date = Utilities.formatDate(eventStartTime, "JST", "yyyy-MM-dd HH:mm:ss");
-        // event.setAllDayDate(new Date(date));
       }
       // その他の変更が必要なプロパティがあれば、追加してください。
       // event.setGuests(updatedEvent.guests); // ゲストリストの変更
@@ -49,14 +45,5 @@ function changeEvent(eventID, summary, date, description,gcalID) {
 }
 
 function test() {
-  // const calendarId = "primary";
-  // const calendar = CalendarApp.getCalendarById(calendarId);
-  // const event = calendar.getEventById("0tabo852hv9856u123h4guo0j4");
-  // var eventStartTime = event.getStartTime();
-  // var eventStartTime = new Date(eventStartTime);
-  // var formattedDate = Utilities.formatDate(eventStartTime, "JST", "yyyy-MM-dd HH:mm:ss");
-  // console.log(event.getTitle());
-  // console.log(event.getDescription());
-  // console.log(formattedDate);
-  changeEvent("j0vokmic1qagnq2685mqpv51p8","", "","","primary")
+  changeEvent("******************","件名", "日付(2023-00-00)","備考","primary")
 }
