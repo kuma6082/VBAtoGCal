@@ -7,7 +7,9 @@
 * GAS
 
 ## 概要
-VBAよりhttpリクエストでwebアプリ化したGASからCalenderAPIを叩いて、設定したタイトル・説明・日付で、終日イベントを作成する
+VBAよりhttpリクエストでwebアプリ化したGASからCalenderAPIを叩いて、設定したタイトル・説明・日付で、終日イベントを作成し、EventのIDを取得する。
+
+EventのIDより変更、削除する機能追加
 
 ## 導入方法
 ### GAS
