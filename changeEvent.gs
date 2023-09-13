@@ -7,7 +7,6 @@ function changeEvent(eventID, summary, date, description,gcalID) {
       // イベントの変更
       if (summary !== ""){
         event.setTitle(summary); 
-        console.log('summary:通過'); 
       }else{
         ;
       } 
@@ -15,14 +14,12 @@ function changeEvent(eventID, summary, date, description,gcalID) {
       // if (description !== null || description !== ""){
       if (description !== ""){
         event.setDescription(description);
-        console.log('description: 通過');
       }else{
         ;
       }
 
       if (date !== ""){
         event.setAllDayDate(new Date(date));
-        console.log('date: 通過');
       }else{
         ;
       }
